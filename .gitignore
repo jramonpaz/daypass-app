@@ -81,4 +81,5 @@ env*
 !env.example*
 .qodo
 
+# Ignorar el archivo .nvmrc
 .nvmrc
