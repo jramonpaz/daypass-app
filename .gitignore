@@ -76,6 +76,7 @@ yarn-error.log
 # env
 env*
 .env
+.env.ts
 !.env.example
 !env.example*
 .qodo
