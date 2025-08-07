@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Strawford-Bold.otf",
+      "sha1": "0a6789089421459587308d908e4c360f22f552f7"
+    },
+    {
+      "path": "src/assets/fonts/Strawford-Light.otf",
+      "sha1": "05bf797d0d9ccd700d5bdb2497db738b808ee3ad"
+    },
+    {
+      "path": "src/assets/fonts/Strawford-Medium.otf",
+      "sha1": "0d073c15c950c37ea77f396d36520599eb64280c"
+    },
+    {
+      "path": "src/assets/fonts/Strawford-Regular.otf",
+      "sha1": "30e54c4020817be440aefdb3b85525bd24c85942"
+    },
+    {
+      "path": "src/assets/fonts/Strawford-RegularItalic.otf",
+      "sha1": "d62faf435b2a929e4b441d94ad6f7b6b61f60366"
+    }
+  ]
+}

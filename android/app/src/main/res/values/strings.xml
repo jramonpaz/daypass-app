@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Daypass</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDmYDqrNyugyKqlMOY2yspzw3ybxUqyDMU</string>
+</resources>
