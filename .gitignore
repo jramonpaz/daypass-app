@@ -80,3 +80,5 @@ env*
 !.env.example
 !env.example*
 .qodo
+
+.nvmrc
