@@ -491,10 +491,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Daypass/Daypass.entitlements;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = 2QGK78RD72;
+				DEVELOPMENT_TEAM = 97GMB47HDF;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Daypass/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Daypass test";
+				INFOPLIST_KEY_CFBundleDisplayName = Daypass;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,9 +522,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Daypass/Daypass.entitlements;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = 2QGK78RD72;
+				DEVELOPMENT_TEAM = 97GMB47HDF;
 				INFOPLIST_FILE = Daypass/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Daypass test";
+				INFOPLIST_KEY_CFBundleDisplayName = Daypass;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

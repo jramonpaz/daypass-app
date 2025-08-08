@@ -93,7 +93,7 @@ const ExploreScreen = () => {
 	};
 
 	const handleSelectHotel = (hotel: IHotelNearby) => {
-		dispatch(hotelActions.setSelected(hotel));
+		//dispatch(hotelActions.setSelected(hotel));
 		// if (!searchSelectedPrediction || !searchFilterData) {
 		//   return;
 		// }
@@ -105,7 +105,7 @@ const ExploreScreen = () => {
 	};
 
 	const toggleFavoriteHotels = (favorite: boolean, hotelId: string) => {
-		dispatch(hotelActions.toggleFavorite({favorite, hotelId}));
+		//dispatch(hotelActions.toggleFavorite({favorite, hotelId}));
 	};
 
 	const handleOnSearch = async (data: IAPIExplorerSearch) => {
@@ -136,7 +136,7 @@ const ExploreScreen = () => {
 
 				<SearchOptionsExplorer onSearch={handleOnSearch} />
 
-				{/* <View style={styles.sectionList}>
+				<View style={styles.sectionList}>
 					<TextComponent size="18" weight="bold">
 						{t("explore-locations")}
 					</TextComponent>
@@ -165,7 +165,7 @@ const ExploreScreen = () => {
 							})}
 						</View>
 					)}
-				</View> */}
+				</View>
 
 				<View style={styles.sectionList}>
 					<View style={styles.rowHead}>

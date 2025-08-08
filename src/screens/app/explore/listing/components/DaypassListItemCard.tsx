@@ -45,7 +45,7 @@ const DaypassListItemCard = (props: Props) => {
 					imageStyle={styles.imageStyle}
 				/>
 
-				<HeartIcon containerStyle={styles.heartContainer} />
+				{/* <HeartIcon containerStyle={styles.heartContainer} /> */}
 			</View>
 			<View style={styles.cardDetail}>
 				<Pressable style={styles.cardDetail} onPress={props.onPress}>

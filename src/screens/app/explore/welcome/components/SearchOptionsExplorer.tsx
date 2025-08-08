@@ -172,7 +172,7 @@ const SearchOptionsExplorer = (props: Props) => {
 				</TextComponent>
 			)}
 
-			<Controller
+			{/* <Controller
 				control={control}
 				rules={{
 					min: { value: 1, message: t("peoples_min_error") },
@@ -200,7 +200,7 @@ const SearchOptionsExplorer = (props: Props) => {
 				<TextComponent size="12" color="primary">
 					{errors.peoples.message}
 				</TextComponent>
-			)}
+			)} */}
 
 			<ButtonComponent
 				title={t("search_button")}

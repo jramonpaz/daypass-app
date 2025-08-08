@@ -45,7 +45,7 @@ const HotelListItem = (props: Props) => {
 		props.onChangeFavorite?.(newValue);
 	};
 
-	console.log("HotelListItem", props.data);
+	//console.log("HotelListItem", props.data);
 
 	return (
 		<View style={styles.container}>
@@ -55,7 +55,7 @@ const HotelListItem = (props: Props) => {
 					style={styles.image}
 					resizeMode="cover"
 				/>
-				<Pressable
+				{/* <Pressable
 					style={styles.favotiteIconContainer}
 					onPress={handleOnChangeFavorite}>
 					<Animated.View style={{ transform: [{ scale: scaleValue }] }}>
@@ -68,7 +68,7 @@ const HotelListItem = (props: Props) => {
 							/>
 						)}
 					</Animated.View>
-				</Pressable>
+				</Pressable> */}
 			</View>
 			<View style={styles.content}>
 				<View style={styles.cardTitle}>
