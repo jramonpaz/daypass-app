@@ -39,6 +39,8 @@ import { formatDate, parseDateStringToDate } from "@app/utils/dates.util";
 import { colors } from "@app/theme";
 import { IAPIExplorerSearch, IHotelListItem } from "@app/types";
 
+import { addDays } from "date-fns";
+
 type NavigationPropType = NavigationProp<ExploreTabStackParamList>;
 
 const ListingOfDaypassScreen = () => {
@@ -148,6 +150,8 @@ const ListingOfDaypassScreen = () => {
 		);
 	};
 
+	console.log("Current search date:", searchFilterData?.date_search);
+
 	return (
 		<View style={styles.main}>
 			<StatusBar backgroundColor={colors.white} barStyle={"dark-content"} />
@@ -166,7 +170,7 @@ const ListingOfDaypassScreen = () => {
 							title={searchSelectedPrediction?.name || ""}
 							date={formatDate(
 								searchFilterData?.date_search
-									? parseDateStringToDate(searchFilterData.date_search)
+									? addDays(parseDateStringToDate(searchFilterData.date_search), 1)
 									: new Date(),
 							)}
 							people={searchFilterData?.pax ?? 2}

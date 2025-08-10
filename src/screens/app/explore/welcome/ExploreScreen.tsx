@@ -112,6 +112,7 @@ const ExploreScreen = () => {
 		// clear all filterdata
 		dispatch(exploreActions.cleanAllSelectedVibes());
 		dispatch(exploreActions.cleanAllSelectedTicketMoods());
+		dispatch(exploreActions.cleanAllSelectedGeneralServices());
 		dispatch(exploreActions.cleanSelectedPriceRange());
 		dispatch(exploreActions.cleanSelectedHotelStars());
 

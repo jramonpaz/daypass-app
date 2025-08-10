@@ -57,6 +57,8 @@ const SearchOptionsExplorer = (props: Props) => {
 
 		dispatch(searchActions.setSearchPredictionList([]));
 
+		console.log({ values });
+
 		const dataPayload: IAPIExplorerSearch = {
 			pagenumber: 1,
 			rowspage: 10,
@@ -162,6 +164,7 @@ const SearchOptionsExplorer = (props: Props) => {
 						leftImage={calendar_outline_icon}
 						onBlur={onBlur}
 						onChangeDate={onChange}
+						locale={language}
 					/>
 				)}
 				name="date"

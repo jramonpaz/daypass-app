@@ -9,3 +9,9 @@ export interface IVibesFilter {
   name: string
   isSelected?: boolean
 }
+
+export interface IGeneralServiceFilter {
+	id_genserv: number;
+	name: string;
+	isSelected?: boolean;
+}

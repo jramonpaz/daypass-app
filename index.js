@@ -44,29 +44,34 @@ const logRequestDetails = (request) => {
 		console.log('Request URL:', request.url);
 		console.log('Request Method:', request.method);
 		console.log('Request Headers:', request.headers);
+		console.log('Request Data:', request.data);
 	}
 }
 
 const logResponseDetails = (response) => {
-	if (DOLOG) {
-		console.log('Response Status:', response.status);
-		console.log('Response Data:', response.data);
-	}
+	// if (DOLOG) {
+	// 	console.log('Response Status:', response.status);
+	// 	console.log('Response Data:', response.data);
+	// }
 }
 
 const logErrorDetails = (error) => {
-	if (DOLOG) {
-		console.error('Error Details:');
-		console.error('Error Message:', error.message);
-		console.error('Error Status:', error.response?.status);
-		console.error('Error Data:', error.response?.data);
-	}
+	// if (DOLOG) {
+	// 	console.error('Error Details:');
+	// 	console.error('Error Message:', error.message);
+	// 	console.error('Error Status:', error.response?.status);
+	// 	console.error('Error Data:', error.response?.data);
+	// }
 }
 
 const PREFIJO = '/api';
 
 axios.interceptors.request.use(
 	async (request) => {
+
+		if (!request.url.startsWith("/")) {
+			request.url = `/${request.url}`;
+		}
 
 		request.url = `${PREFIJO}${request.url}`;
 		logRequestDetails(request);

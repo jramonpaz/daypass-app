@@ -107,6 +107,8 @@ export const viewer_venueGetReviewsService =
 			dispatch(hotelActions.clean());
 			dispatch(hotelActions.setIsLoading(true));
 
+			console.log("Fetching venue reviews...", payload);
+
 			const url = "/viewer/venueGetDetail_Reviews";
 			const { data, status } = await axios.post(url, payload);
 			// 200 = Ok

@@ -88,11 +88,11 @@ const FilterHeaderComponent = (props: Props) => {
 				<Image source={share_icon} style={styles.backIcon} />
 			</Pressable>
 
-			<HeartIcon
+			{/* <HeartIcon
 				containerStyle={[styles.iconRoundContainer, gStyles.shadow_6]}
 				isActive={isHeartActive}
 				onChange={handlePressHeart}
-			/>
+			/> */}
 		</View>
 	);
 };

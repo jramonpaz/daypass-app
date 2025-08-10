@@ -10,7 +10,7 @@ import LabelWithIcon from "@app/components/molecules/LabelWithIcon";
 import DaypassContractableProduct from "./DaypassContractableProduct";
 
 import { generateImageUrls } from "@app/utils/apiParser.util";
-import { servicesIconsIndex } from "@app/utils/icons.util";
+import { generateServiceIconUrl, servicesIconsIndex } from "@app/utils/icons.util";
 import { normalizePixelSize } from "@app/utils/normalize";
 
 import { star_icon } from "@app/utils/images";
@@ -18,6 +18,7 @@ import { star_icon } from "@app/utils/images";
 import { IHotelListItem } from "@app/types";
 import { colors } from "@app/theme";
 import { useAppSelector } from "@app/hooks/redux.hook";
+import { ServiceIcon } from "@app/components/atoms/servicesIconsSvg/ServiceIcon";
 
 type Props = {
 	// daypass: IDaypassDetailListItem,
@@ -84,16 +85,25 @@ const DaypassListItemCard = (props: Props) => {
 					contentContainerStyle={styles.servicesRow}>
 					{hotelItem.services.map((service, index) => {
 						const CID = service.id + "";
-						const IconComponent =
-							servicesIconsIndex[CID] ?? servicesIconsIndex["1"];
+						// const IconComponent =
+						// 	servicesIconsIndex[CID] ?? servicesIconsIndex["1"];
 
+						const uri = generateServiceIconUrl(CID);
 						return (
 							<LabelWithIcon
 								key={`${index}-${service.id}`}
-								label={service[language as keyof typeof service]}
+								label={`${service[language as keyof typeof service]}`}
 								// iconSource={beach_icon}
+								// iconComponent={
+								// 	IconComponent && <IconComponent fill={colors.muted} />
+								// }
 								iconComponent={
-									IconComponent && <IconComponent fill={colors.muted} />
+									<ServiceIcon
+										width={24}
+										height={24}
+										uri={uri}
+										fill={colors.muted}
+									/>
 								}
 								theme="muted"
 								size="small"

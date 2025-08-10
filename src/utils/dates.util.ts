@@ -1,6 +1,6 @@
-import moment from 'moment';
+import moment from "moment";
 
-export type DateFormat = 'D MMM' | 'YYYYMMDD' | 'D MMM YYYY';
+export type DateFormat = "D MMM" | "YYYYMMDD" | "D MMM YYYY";
 
 /**
  * The `formatDate` function in TypeScript takes a date object and a format string as input, and
@@ -16,8 +16,8 @@ export type DateFormat = 'D MMM' | 'YYYYMMDD' | 'D MMM YYYY';
  * and `format` provided. The date is being formatted using the `moment` library according to the
  * specified `format` (which defaults to 'D MMM' if not provided).
  */
-export const formatDate = (date: Date, format: DateFormat = 'D MMM'): string => {
-  return moment.utc(new Date(date)).format(format);
+export const formatDate = (date: Date, format: DateFormat = "D MMM"): string => {
+	return moment.utc(new Date(date)).format(format);
 };
 
 /**
@@ -26,17 +26,17 @@ export const formatDate = (date: Date, format: DateFormat = 'D MMM'): string => 
  * @returns A JavaScript Date object.
  */
 export const parseDateStringToDate = (dateString: string): Date => {
-  if (!/^\d{8}$/.test(dateString)) {
-    throw new Error('Invalid date format. Expected YYYYMMDD.');
-  }
+	if (!/^\d{8}$/.test(dateString)) {
+		throw new Error("Invalid date format. Expected YYYYMMDD.");
+	}
 
-  const date = moment(dateString, 'YYYYMMDD').toDate();
+	const date = moment(dateString, "YYYYMMDD").toDate();
 
-  if (isNaN(date.getTime())) {
-    throw new Error('Invalid date.');
-  }
+	if (isNaN(date.getTime())) {
+		throw new Error("Invalid date.");
+	}
 
-  return date;
+	return date;
 };
 
 /**
@@ -58,18 +58,18 @@ export const parseDateStringToDate = (dateString: string): Date => {
  * const nextDays = calculateFutureDate(10, 'days');
  * console.log(nextDays.format('YYYY-MM-DD'));
  */
-export function calculateFutureDate(amount: number, unit: 'days' | 'months'): Date {
-  if (amount <= 0) {
-    throw new Error('The "amount" must be a positive number.');
-  }
+export function calculateFutureDate(amount: number, unit: "days" | "months"): Date {
+	if (amount <= 0) {
+		throw new Error('The "amount" must be a positive number.');
+	}
 
-  if (unit !== 'days' && unit !== 'months') {
-    throw new Error('The unit must be either "days" or "months".');
-  }
+	if (unit !== "days" && unit !== "months") {
+		throw new Error('The unit must be either "days" or "months".');
+	}
 
-  const futureDate = moment().add(amount, unit);
+	const futureDate = moment().add(amount, unit);
 
-  return futureDate.toDate();
+	return futureDate.toDate();
 }
 
 /**
@@ -91,16 +91,16 @@ export function calculateFutureDate(amount: number, unit: 'days' | 'months'): Da
  * const previousDays = calculatePastDate(10, 'days');
  * console.log(previousDays.toISOString());
  */
-export function calculatePastDate(amount: number, unit: 'days' | 'months'): Date {
-  if (amount <= 0) {
-    throw new Error('The "amount" must be a positive number.');
-  }
+export function calculatePastDate(amount: number, unit: "days" | "months"): Date {
+	if (amount <= 0) {
+		throw new Error('The "amount" must be a positive number.');
+	}
 
-  if (unit !== 'days' && unit !== 'months') {
-    throw new Error('The unit must be either "days" or "months".');
-  }
+	if (unit !== "days" && unit !== "months") {
+		throw new Error('The unit must be either "days" or "months".');
+	}
 
-  const pastDate = moment().subtract(amount, unit);
+	const pastDate = moment().subtract(amount, unit);
 
-  return pastDate.toDate();
+	return pastDate.toDate();
 }
