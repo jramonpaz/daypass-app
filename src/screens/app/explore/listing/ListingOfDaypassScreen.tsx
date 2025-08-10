@@ -150,7 +150,7 @@ const ListingOfDaypassScreen = () => {
 		);
 	};
 
-	console.log("Current search date:", searchFilterData?.date_search);
+	//console.log("Current search date:", searchFilterData?.date_search);
 
 	return (
 		<View style={styles.main}>

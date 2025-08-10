@@ -78,6 +78,8 @@ const DaypassListItemCard = (props: Props) => {
 						</View>
 					</View>
 				</Pressable>
+
+				{/* Servicios */}
 				<ScrollView
 					horizontal={true}
 					nestedScrollEnabled={true}

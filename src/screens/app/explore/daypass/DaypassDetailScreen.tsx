@@ -49,6 +49,8 @@ import {
 } from "@app/types";
 
 import DetailPoliceWebViewTab from "./innerTabs/DetailPoliceWebViewTab";
+import { addDays } from "date-fns";
+import { generatePriceFormatted } from "@app/utils/currency.util";
 
 type Props = {
 	navigation: NavigationProp<ExploreTabStackParamList>;
@@ -276,9 +278,10 @@ const DaypassDetailScreen = (props: Props) => {
 						{t("total-price")}
 					</TextComponent>
 					<TextComponent color="primary" size="16" weight="bold">
-						{`${searchFilterData?.currency ?? "USD"} ${
-							currencySelected.symbol
-						}${formatToCurrency(totalAmount())}`}
+						{/* {`${searchFilterData?.currency ?? "USD"} ${
+							currencySelected.iso
+						}${formatToCurrency(totalAmount())}`} */}
+						{`${generatePriceFormatted(totalAmount(), searchFilterData?.currency ?? "USD")}`}
 					</TextComponent>
 				</View>
 				<ButtonComponent
@@ -296,7 +299,7 @@ const DaypassDetailScreen = (props: Props) => {
 					onPressShare={handleShareDaypass}
 					date={
 						searchFilterData
-							? parseDateStringToDate(searchFilterData.date_search)
+							? addDays(parseDateStringToDate(searchFilterData.date_search), 1)
 							: new Date()
 					}
 					peopleCount={searchFilterData?.pax ?? 2}
