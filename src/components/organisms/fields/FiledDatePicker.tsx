@@ -25,6 +25,9 @@ export type FiledDatePickerProps = FiledBaseProps & {
 };
 
 const FiledDatePicker = (props: FiledDatePickerProps) => {
+
+	//console.log(props.date)
+
 	const [dateSelected, setDateSelected] = useState<Date | undefined>(props.date);
 	const [open, setOpen] = useState<boolean>(props.open ?? false);
 
@@ -48,6 +51,7 @@ const FiledDatePicker = (props: FiledDatePickerProps) => {
 			onPress={() => setOpen(true)}>
 			<BottomModalBase isVisible={open} setIsVisible={setOpen}>
 				<DateTimePicker
+					firstDayOfWeek={locale === 'es'?1:0}
 					locale={locale}
 					mode="single"
 					date={dateSelected ? subDays(new Date(dateSelected), 1) : undefined}

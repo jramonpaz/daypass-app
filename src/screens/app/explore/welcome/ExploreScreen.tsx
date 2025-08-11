@@ -173,9 +173,9 @@ const ExploreScreen = () => {
 						<TextComponent size="18" weight="bold">
 							{t("explore-nearby-hotels")}
 						</TextComponent>
-						<TextComponent size="14" color="muted" weight="bold" underline>
+						{/* <TextComponent size="14" color="muted" weight="bold" underline>
 							{t("explore-see-all")}
-						</TextComponent>
+						</TextComponent> */}
 					</View>
 
 					{loadingHotels ? (

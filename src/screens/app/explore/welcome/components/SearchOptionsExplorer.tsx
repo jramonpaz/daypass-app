@@ -35,7 +35,8 @@ const SearchOptionsExplorer = (props: Props) => {
 		mode: "onChange",
 		// reValidateMode: 'onChange',
 		defaultValues: {
-			date: undefined,
+			//date: undefined,
+			date: new Date(),
 			peoples: "",
 			search: "",
 		},
@@ -57,7 +58,7 @@ const SearchOptionsExplorer = (props: Props) => {
 
 		dispatch(searchActions.setSearchPredictionList([]));
 
-		console.log({ values });
+		//console.log({ values });
 
 		const dataPayload: IAPIExplorerSearch = {
 			pagenumber: 1,
@@ -165,6 +166,7 @@ const SearchOptionsExplorer = (props: Props) => {
 						onBlur={onBlur}
 						onChangeDate={onChange}
 						locale={language}
+						date={value}
 					/>
 				)}
 				name="date"
